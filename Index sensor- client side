@@ -1,0 +1,191 @@
+<!-- Bootstrap modal -->
+<div class="modal fade" id="modal_form" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h3 class="modal-title">Sensor Form</h3>
+            </div>
+            <div class="modal-body form">
+                <form action="#" id="form" class="form-horizontal">
+                    <input type="hidden" value="" name="id"/> 
+                    <div class="form-body">
+
+ <div class="form-group">
+                    <label class="control-label" for="title">namasensor  </label>
+                    <input type="text" name="namasensor" class="form-control" value="Isi nama sensor" data-error="Please enter title." required />
+                    <div class="help-block with-errors"></div>
+                </div>
+ <div class="form-group">
+                    <label class="control-label" for="title">satuan</label>
+                    <input type="text" name="satuan" class="form-control" value="Watt" data-error="Please enter title." required />
+                    <div class="help-block with-errors"></div>
+                </div>
+             
+
+<div class="form-group">
+                  <label class="control-label" for="title">Pilih pin:</label>
+                    <select class="form-control" name="pin" title="Memilih tipe in out">
+                     
+                              
+                                    {{# each pilih_pin }}
+                                    <li><option> {{this}} </option></li>     
+                                {{/each}}  
+                    </select>                                               
+                        </div>
+
+                        
+
+<div class="form-group">
+                    <label class="control-label" for="title">pin_out</label>
+                    <input type="number" name="pin_out" class="form-control" value="10" data-error="Please enter title." required />
+                    <div class="help-block with-errors"></div>
+                </div>
+ <div class="form-group">
+                    <label class="control-label" for="title">power</label>
+                    <input type="number" name="power" class="form-control" value="220" data-error="Please enter title." required />
+                    <div class="help-block with-errors"></div>
+                </div>
+ <div class="form-group">
+                    <label class="control-label" for="title">satuan1</label>
+                    <input type="text" name="satuan1" class="form-control" value="volt" data-error="Please enter title." required />
+                    <div class="help-block with-errors"></div>
+                </div>
+ <div class="form-group">
+                    <label class="control-label" for="title"> konsumsi </label>
+                    <input type="number" name="konsumsi" class="form-control" value="2200" data-error="Please enter title." required />
+                    <div class="help-block with-errors"></div>
+                </div>
+ <div class="form-group">
+                    <label class="control-label" for="title">satuan2</label>
+                    <input type="text" name="satuan2" class="form-control" value="kVA" data-error="Please enter title." required />
+                    <div class="help-block with-errors"></div>
+                </div>
+ <div class="form-group">
+                    <label class="control-label" for="title">akumulasi </label>
+                    <input type="number" name="akumulasi" class="form-control" value="3500" data-error="Please enter title." required />
+                    <div class="help-block with-errors"></div>
+                </div>
+ <div class="form-group">
+                    <label class="control-label" for="title">satuan3</label>
+                    <input type="text" name="satuan3" class="form-control" value="kVA" data-error="Please enter title." required />
+                    <div class="help-block with-errors"></div>
+                </div>
+                 
+ <div class="form-group">
+                  <label class="control-label" for="title">tipe_in_out:</label>
+                    <select class="form-control" name="tipe_in_out" title="Memilih tipe in out">
+                        <label class="control-label" for="title">Pilih tipe_in_out:</label>
+                              
+                                    <li><option>input</option></li>     
+                                    <li><option>output</option></li>     
+                                  
+                    </select>                                               
+                        </div>
+
+ <div class="form-group">
+                    <label class="control-label" for="title">low</label>
+                    <input type="number" name="low" class="form-control" value="17" data-error="Please enter title." required />
+                    <div class="help-block with-errors"></div>
+                </div>
+ <div class="form-group">
+                    <label class="control-label" for="title"> high</label>
+                    <input type="number" name="high" class="form-control" value="32" data-error="Please enter title." required />
+                    <div class="help-block with-errors"></div>
+                </div>
+ <div class="form-group">
+                    <label class="control-label" for="title">value</label>
+                    <input type="text" name="value" class="form-control" value="15" data-error="Please enter title." required />
+                    <div class="help-block with-errors"></div>
+                </div>
+   <div class="form-group">
+                  <label class="control-label" for="title">driver:</label>
+                    <select class="form-control" name="driver" title="Memilih script">
+                        <label class="control-label" for="title">Pilih driver:</label>
+                              
+                                    <li><option>GPIO</option></li>     
+                                    <li><option>DHT11</option></li>     
+                                    <li><option>DHT22</option></li>     
+                                    <li><option>BMP36</option></li>     
+                                     <li><option>Clap switch</option></li>     
+                                     <li><option>HTML</option></li>     
+                 </select>                                               
+                        </div>
+
+<div class="form-group">
+                    <label class="control-label" for="title">Log:</label>  <!-- check data-on -->
+                   <!-- <input name="log"  unchecked data-toggle="toggle" data-on="True" data-off="False" data-width="100" type="checkbox"> -->
+                       <input type="checkbox" name="log" id="log">
+                    <div class="help-block with-errors"></div>
+                </div>
+
+
+  <div class="form-group">
+                    <label class="control-label" for="title">enable</label>  <!-- check data-on -->
+               <!--     <input name="enable"  unchecked data-toggle="toggle" data-on="True" data-off="False" data-width="100" type="checkbox"> -->
+                       <input type="checkbox" name="enable" id="enable">
+                    <div class="help-block with-errors"></div>
+                </div>
+
+  <div class="form-group">
+                    <label class="control-label" for="title">Description:</label>
+                    <textarea name="description" class="form-control"  value="Contoh : Untuk mengukur suhu." ></textarea>
+                    <div class="help-block with-errors"></div>
+                </div>
+
+ <div class="form-group">
+                    <label class="control-label" for="title">nama_chart</label>
+                    <input type="text" name="nama_chart" class="form-control" value="0" data-error="Please enter title." required />
+                    <div class="help-block with-errors"></div>
+                </div>
+ <div class="form-group">
+                    <label class="control-label" for="title">tipe_chart</label>
+                    <input type="text" name="tipe_chart" class="form-control" value="0" data-error="Please enter title." required />
+                    <div class="help-block with-errors"></div>
+                </div>
+ <div class="form-group">
+                    <label class="control-label" for="title">text_chart</label>
+                    <input type="text" name="text_chart" class="form-control" value="0" data-error="Please enter title." required />
+                    <div class="help-block with-errors"></div>
+                </div>
+ <div class="form-group">
+                    <label class="control-label" for="title">borderWidth_chart</label>
+                    <input type="number" name="borderWidth_chart" class="form-control" value="0" data-error="Please enter title." required />
+                    <div class="help-block with-errors"></div>
+                </div>
+ <div class="form-group">
+                    <label class="control-label" for="title">borderColor_chart</label>
+                    <input type="text" name="borderColor_chart" class="form-control" value="0" data-error="Please enter title." required />
+                    <div class="help-block with-errors"></div>
+                </div>
+ <div class="form-group">
+                    <label class="control-label" for="title">label_chart </label>
+                    <input type="text" name="label_chart" class="form-control" value="0" data-error="Please enter title." required />
+                    <div class="help-block with-errors"></div>
+                </div>
+ <div class="form-group">
+                    <label class="control-label" for="title">interval</label>
+                    <input type="number" name="interval" class="form-control" value="0" data-error="Please enter title." required />
+                    <div class="help-block with-errors"></div>
+                </div>
+
+            <div class="form-group">
+                    <label class="control-label" for="title">view:</label>  <!-- check data-on -->
+                  <!-- <input name="view"  data-toggle="toggle" data-on="True" data-off="False" data-width="100" type="checkbox">   -->
+                     <input type="checkbox" name="view" id="view">
+
+                    <div class="help-block with-errors"></div>
+                </div>
+
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="btnSave" onclick="save()" class="btn btn-primary">Save</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- End Bootstrap modal -->
+
