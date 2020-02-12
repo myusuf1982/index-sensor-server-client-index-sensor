@@ -1,0 +1,10 @@
+<div class="form-group">
+                  <label class="control-label" for="title">Pilih pin:</label>
+                    <select class="form-control" name="pin" title="Memilih tipe in out">
+                     
+                              
+                                    {{# each pilih_pin }}
+                                    <li><option> {{this}} </option></li>     
+                                {{/each}}  
+                    </select>                                               
+                        </div>
